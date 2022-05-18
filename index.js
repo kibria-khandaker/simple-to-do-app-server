@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Mongo Connect set user/pass using .env 
-const uri = "mongodb+srv://simpleToDoList:<password>@cluster0.bllil.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.bllil.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 client.connect(err => {
