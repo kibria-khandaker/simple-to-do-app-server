@@ -8,26 +8,26 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Mongo Connect set user/pass using .env 
-const uri = "mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.bllil.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+// // Mongo Connect set user/pass using .env 
+// const uri = "mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.bllil.mongodb.net/?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
-client.connect(err => {
-    const collection = client.db("test").collection("devices");
-    // perform actions on the collection object
-    client.close();
-});
+// client.connect(err => {
+//     const collection = client.db("test").collection("devices");
+//     // perform actions on the collection object
+//     client.close();
+// });
 
 
-// main function working for server 
-async function run() {
-    try {
-        //--------
+// // main function working for server 
+// async function run() {
+//     try {
+//         //--------
 
-        //--------
-    } finally { }
-}
-run().catch(console.dir)
+//         //--------
+//     } finally { }
+// }
+// run().catch(console.dir)
 
 
 
