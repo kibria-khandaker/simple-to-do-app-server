@@ -48,9 +48,9 @@ run().catch(console.dir)
 
 // for get main routing and testing  -
 app.get('/', (req, res) => {
-    res.send('To Do List Server is Running')
+    res.send('Simple to-do app Server is Running')
 });
 
 app.listen(port, () => {
-    console.log('To Do Server Listening to port', port);
+    console.log('Simple to-do app Server Listening to port', port);
 })
